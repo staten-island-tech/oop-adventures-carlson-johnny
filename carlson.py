@@ -23,8 +23,8 @@ class player:
 
 name = input("Name your hero")
 name = player(f"{name}", 100, [{"weapon": "wooden sword", "attack" : 15}], 1.0)
-name.money_buff(1.2)
-name.earn(10)
+name.money_buff = 1.2
+name.earn(10000)
 for key, value in name.__dict__.items():
     print(f"{key}: {value}")
 
