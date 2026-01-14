@@ -20,16 +20,16 @@ class player:
         name.money -= value
     
         
-
 name = input("Name your hero: ")
 name = player(f"{name}", 100, [{"weapon": "wooden sword", "attack" : 15}], 1.0)
 
-
 Do = input("Choose something to do. 1.Adventure.  2.Shop: ")
 if Do == "Adventure":
-    print("coming soon")
+    biome = input("Where do you want to adventure. Biome names here: ")
+
 
 if Do == "Shop":
+    player.show_balance
     shopping = input("buy something: ")
     for item in Shop:
         if shopping in item["weapon"]:
@@ -37,8 +37,3 @@ if Do == "Shop":
             name.spend(item["price"])
             for key, value in name.__dict__.items():
                 print(f"{key}: {value}")
-
-
-
-
-
