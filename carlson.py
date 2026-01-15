@@ -23,14 +23,15 @@ class player:
 
 
 name = input("Name your hero")
-name = player(f"{name}", 100, [{"weapon": "wooden sword", "attack" : 15}], 1.0)
+name = player(f"{name}", 100, 100, [{"weapon": "wooden sword", "attack" : 15}], 1.0)
 x = Ogre("Ogre", 100, 10, 10)
     
 
 Do = input("Choose something to do. 1.Adventure.  2.Shop")
 if Do == "Adventure":
     print("An Ogre spawned")
-    
+    for key, item in x.__dict__.items():
+        print(f"{key} : {item}")
     
 
 if Do == "Shop":
