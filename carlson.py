@@ -5,11 +5,12 @@ Shop = [
 ]
 from other import Ogre
 class player:
-    def __init__(self, name, money, inventory, money_buff):
+    def __init__(self, name, health, money, inventory, money_buff):
         self.name = name
         self.money = money
         self.inventory = inventory
         self.money_buff = money_buff
+        self.health = health
     def earn(self, value):
         self.money += value * self.money_buff
     def show_balance(self):
@@ -17,21 +18,19 @@ class player:
     def buy(self, item):
         self.inventory.append(item)
     def spend(self, value):
-        name.money -= value
+        self.money -= value
     
-x = Ogre("Ogre", 100, 10, 10)
-for key, item in x.__dict__.items():
-    print(f"{key} : {item}")
-      
 
-'''name = input("Name your hero")
+
+name = input("Name your hero")
 name = player(f"{name}", 100, [{"weapon": "wooden sword", "attack" : 15}], 1.0)
-
+x = Ogre("Ogre", 100, 10, 10)
+    
 
 Do = input("Choose something to do. 1.Adventure.  2.Shop")
 if Do == "Adventure":
-    print("Starting Adventure")
-
+    print("An Ogre spawned")
+    
     
 
 if Do == "Shop":
@@ -47,7 +46,7 @@ if Do == "Shop":
             print("item not found")
             break
     for key, value in name.__dict__.items():
-        print(f"{key}: {value}")'''
+        print(f"{key}: {value}")
 
 
 
