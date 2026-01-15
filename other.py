@@ -9,6 +9,6 @@ class Ogre(mobs):
         self.name = name
         super().__init__(health, attack, drops)
 
-x = Ogre("Ogre", 100, 10, 10)
+'''x = Ogre("Ogre", 100, 10, 10)
 for key, item in x.__dict__.items():
-    print(f"{key} : {item}")
+    print(f"{key} : {item}")'''
