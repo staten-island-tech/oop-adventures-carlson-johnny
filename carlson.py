@@ -3,7 +3,7 @@ Shop = [
 { "weapon" : "Ice Sword", "attack" : 50, "price": 75},
 { "weapon" : "Fire Sword", "attack" : 60, "price": 95}
 ]
-
+from other import Ogre
 class player:
     def __init__(self, name, money, inventory, money_buff):
         self.name = name
@@ -19,15 +19,19 @@ class player:
     def spend(self, value):
         name.money -= value
     
-        
+x = Ogre("Ogre", 100, 10, 10)
+for key, item in x.__dict__.items():
+    print(f"{key} : {item}")
+      
 
-name = input("Name your hero")
+'''name = input("Name your hero")
 name = player(f"{name}", 100, [{"weapon": "wooden sword", "attack" : 15}], 1.0)
 
 
 Do = input("Choose something to do. 1.Adventure.  2.Shop")
 if Do == "Adventure":
     print("Starting Adventure")
+
     
 
 if Do == "Shop":
@@ -41,8 +45,9 @@ if Do == "Shop":
             break
         if shopping not in item["weapon"]:
             print("item not found")
-        for key, value in name.__dict__.items():
-            print(f"{key}: {value}")
+            break
+    for key, value in name.__dict__.items():
+        print(f"{key}: {value}")'''
 
 
 
